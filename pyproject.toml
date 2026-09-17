@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pdf-hyperlinker"
+version = "0.1.0"
+description = "Add clickable links to PDF table of contents entries."
+readme = "README.md"
+requires-python = ">=3.10"
+
+dependencies = [
+    "pymupdf",
+    "pytesseract",
+    "pillow",
+]
+
+[project.scripts]
+pdf-hyperlinker = "cli:main"
+
+[tool.setuptools]
+py-modules = ["cli", "linker", "toc", "pdf_text"]
