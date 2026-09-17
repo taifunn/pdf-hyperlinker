@@ -15,12 +15,6 @@ A simple Python tool that adds clickable links to a PDF table of contents.
 - Python 3.10+
 - Tesseract OCR
 
-On macOS:
-
-```bash
-brew install tesseract
-```
-
 ## Installation
 
 Clone the repository:
