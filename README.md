@@ -4,16 +4,17 @@ A simple Python tool that adds clickable links to a PDF table of contents.
 
 ## Features
 
-- Detects table of contents pages
-- Supports text-based and scanned PDFs
-- Uses OCR for scanned pages
-- Automatically detects page number offset
-- Supports `low`, `mid`, and `high` modes
+* Detects table of contents pages
+* Supports text-based and scanned PDFs
+* Uses OCR for scanned pages
+* Automatically detects page number offset
+* Supports `low`, `mid`, and `high` modes
 
 ## Requirements
 
-- Python 3.10+
-- Tesseract OCR
+* Python 3.10+
+* Tesseract OCR
+* pipx
 
 ## Installation
 
@@ -24,12 +25,7 @@ git clone https://github.com/taifunn/pdf-hyperlinker.git
 cd pdf-hyperlinker
 ```
 
-Install `pipx`:
-
-```bash
-brew install pipx
-pipx ensurepath
-```
+Install `pipx` if it is not already installed.
 
 Install PDF Hyperlinker:
 
@@ -54,9 +50,9 @@ pdf-hyperlinker ~/Downloads/book.pdf
 Choose a mode:
 
 ```bash
-pdf-hyperlinker book.pdf -m low
-pdf-hyperlinker book.pdf -m mid
-pdf-hyperlinker book.pdf -m high
+pdf-hyperlinker book.pdf --mode low
+pdf-hyperlinker book.pdf --mode mid
+pdf-hyperlinker book.pdf --mode high
 ```
 
 Choose the output file:
@@ -73,18 +69,6 @@ book_linked.pdf
 
 ## Modes
 
-- `low` — faster
-- `mid` — balanced, default
-- `high` — more accurate
-
-## Project Structure
-
-```text
-pdf-hyperlinker/
-├── cli.py
-├── linker.py
-├── toc.py
-├── pdf_text.py
-├── pyproject.toml
-└── README.md
-```
+* `low` — faster
+* `mid` — balanced, default
+* `high` — more accurate
